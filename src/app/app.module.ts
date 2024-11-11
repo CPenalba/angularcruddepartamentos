@@ -8,9 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { appRoutingProvider, routing } from './app.routing';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepatamentos } from './services/service.departamentos';
+import { CreateComponent } from './components/create/create.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, HomeComponent],
+  declarations: [AppComponent, MenuComponent, HomeComponent, CreateComponent],
   imports: [BrowserModule, routing, FormsModule],
   providers: [appRoutingProvider, provideHttpClient(), ServiceDepatamentos],
   bootstrap: [AppComponent],

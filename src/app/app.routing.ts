@@ -2,8 +2,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
 import { HomeComponent } from './components/home/home.component';
+import { CreateComponent } from './components/create/create.component';
 
-const appRoutes: Routes = [{ path: '', component: HomeComponent }];
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'create', component: CreateComponent },
+];
 
 export const appRoutingProvider: any[] = [];
 
