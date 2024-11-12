@@ -7,6 +7,7 @@
         <th>Id departamento</th>
         <th>Nombre</th>
         <th>Localidad</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,18 @@
         <td>{{ dept.idDepartamento }}</td>
         <td>{{ dept.nombre }}</td>
         <td>{{ dept.localidad }}</td>
+        <td>
+          <a
+            [routerLink]="[
+              '/details',
+              dept.idDepartamento,
+              dept.nombre,
+              dept.localidad
+            ]"
+            class="btn btn-success"
+            >Details</a
+          >
+        </td>
       </tr>
       }
     </tbody>
