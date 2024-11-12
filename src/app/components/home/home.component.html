@@ -9,6 +9,7 @@
         <th>Localidad</th>
         <th>Details</th>
         <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -33,6 +34,14 @@
           <a [routerLink]="['/edit', dept.idDepartamento]" class="btn btn-info"
             >Edit</a
           >
+        </td>
+        <td>
+          <button
+            (click)="deleteDepartamento(dept.idDepartamento)"
+            class="btn btn-danger"
+          >
+            Delete
+          </button>
         </td>
       </tr>
       }
