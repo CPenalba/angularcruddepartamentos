@@ -8,6 +8,7 @@
         <th>Nombre</th>
         <th>Localidad</th>
         <th>Details</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,11 @@
             ]"
             class="btn btn-success"
             >Details</a
+          >
+        </td>
+        <td>
+          <a [routerLink]="['/edit', dept.idDepartamento]" class="btn btn-info"
+            >Edit</a
           >
         </td>
       </tr>

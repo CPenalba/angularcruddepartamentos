@@ -25,4 +25,10 @@ export class ServiceDepatamentos {
     let url = environment.urlApiDepartamentos + request;
     return this._http.post(url, json, { headers: header });
   }
+
+  findDepartamento(idDepartamento: string): Observable<any> {
+    let request = 'api/departamentos/' + idDepartamento;
+    let url = environment.urlApiDepartamentos + request;
+    return this._http.get(url);
+  }
 }
