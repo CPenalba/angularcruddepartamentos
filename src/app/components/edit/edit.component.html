@@ -1,1 +1,38 @@
-<p>edit works!</p>
+<div>
+  <h1>Edit</h1>
+  <hr />
+  <p>
+    <a [routerLink]="['/']">Back to list</a>
+  </p>
+  <form #editForm="ngForm">
+    <label>Id departamento: </label>
+    <input
+      type="number"
+      class="form-control"
+      name="cajaid"
+      #cajaid
+      value="{{ departamento?.idDepartamento }}"
+      disabled
+    />
+    <label>Nombre: </label>
+    <input
+      type="text"
+      class="form-control"
+      name="cajanombre"
+      #cajanombre
+      value="{{ departamento?.nombre }}"
+    />
+    <label>Localidad: </label>
+    <input
+      type="text"
+      class="form-control"
+      name="cajalocalidad"
+      #cajalocalidad
+      value="{{ departamento?.localidad }}"
+    />
+    <br />
+    <button class="btn btn-secondary" (click)="updateDepartamento()">
+      Update departamento
+    </button>
+  </form>
+</div>
